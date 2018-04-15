@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+</head>
+<body>
+	<div class="register login">
+		<header class="head">
+			<a href="javascript:history.back();" class="back"></a>
+			<span>登录</span>
+			<a href="#" class="link">注册</a>
+		</header>
+		<div class="content">
+			<ul class="register_info">
+				<li>
+					<div class="register_input">
+						<input type="text" placeholder="用户名" class="user"/>
+					</div>
+					<div class="register_right">
+						<span class="error show"></span>
+					</div>
+				</li>
+				<li>
+					<div class="register_input">
+						<input type="password" placeholder="密码" class="password"/>
+					</div>
+					<div class="register_right">
+						<span class="error show"></span>
+					</div>
+				</li>
+				<li>
+					<div class="register_input">
+						<input type="text" placeholder="输入验证码"/>
+					</div>
+					<div class="register_right">
+						<img src="images/yzm.jpg"/>
+					</div>
+				</li>
+			</ul>
+			<a href="javascript:;" class="submit">登&nbsp;录</a>
+			<div class="forger_password">
+				<a href="#">忘记密码？</a>
+			</div>
+			<h3 class="type_login"><span>可以使用以下方式登录</span></h3>
+			<div class="type_login_kinds">
+				<a href="#" class="qq"></a>
+				<a href="#" class="wb"></a>
+			</div>
+		</div>
+	</div>
+	<div class="login_btm">
+		<div class="login_btm_text">
+			<p><span>触屏版</span><span>电脑版</span></p>
+			<p>Copyright © 2018 使用百度前必读百度传课<br />Chuanke.Baidu.com</p>
+		</div>
+		<a href="javascript:;" class="login_btm_btn">返回顶部</a>
+	</div>
+	<script src="js/jq.js"></script>
+	<script>
+		var flag=1;
+		$(".register_info_text").click(function(){
+			if(flag){
+				$(this).find("i").removeClass("on")
+				flag=0
+			}else{
+				$(this).find("i").addClass("on")
+				flag=1
+			}
+		})
+	</script>
+</body>
+</html>

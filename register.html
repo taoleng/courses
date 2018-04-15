@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+</head>
+<body>
+	<div class="register">
+		<header class="head">
+			<a href="javascript:history.back();" class="back"></a>
+			<span>注册</span>
+			<a href="#" class="link">登录</a>
+		</header>
+		<div class="content">
+			<ul class="register_info">
+				<li>
+					<div class="register_input">
+						<input type="text" placeholder="输入用户名"/>
+					</div>
+					<div class="register_right">
+						<span class="error"></span>
+					</div>
+				</li>
+				<li>
+					<div class="register_input">
+						<input type="password" placeholder="输入密码"/>
+					</div>
+					<div class="register_right">
+						<span class="error"></span>
+					</div>
+				</li>
+				<li>
+					<div class="register_input">
+						<input type="text" placeholder="输入邮箱"/>
+					</div>
+					<div class="register_right">
+						<span class="error"></span>
+					</div>
+				</li>
+				<li>
+					<div class="register_input">
+						<input type="text" placeholder="输入验证码"/>
+					</div>
+					<div class="register_right">
+						<img src="images/yzm.jpg"/>
+					</div>
+				</li>
+			</ul>
+			<a href="javascript:;" class="submit">确&nbsp;定</a>
+			<p class="register_info_text"><i class="on"></i>同意并阅读百度用户协议及百度隐私权保护声明</p>
+		</div>
+	</div>
+	<script src="js/jq.js"></script>
+	<script>
+		var flag=1;
+		$(".register_info_text").click(function(){
+			if(flag){
+				$(this).find("i").removeClass("on")
+				flag=0
+			}else{
+				$(this).find("i").addClass("on")
+				flag=1
+			}
+		})
+	</script>
+</body>
+</html>
